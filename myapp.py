@@ -27,7 +27,7 @@ def open_index():
             return render_template('index.html',message="please put column number")
         try:
             input_file_pate="uploads/"+excelfile.filename
-            output_file_pate="downloads/"+excelfile.filename
+            output_file_pate='downloads/consolidate.xlsx'
             sumcoloumn=int(request.form['coloumnnumber'])
             excelfile.save(input_file_pate)
             process_excel(input_file_pate,output_file_pate,sumcoloumn)
