@@ -20,7 +20,7 @@ def open_index():
         excelfile=request.files['file']
         if excelfile.filename=="":
 
-            return render_template('index.html',message="chuitya select file")
+            return render_template('index.html',message="please select file")
         if excelfile.filename.rsplit(".")[-1]!="xlsx":
             return render_template('index.html',message="please select excel file only")
         if request.form["coloumnnumber"]=="":
